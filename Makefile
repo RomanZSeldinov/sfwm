@@ -30,16 +30,17 @@ dwm: ${OBJ}
 
 clean:
 	@echo cleaning
-	@rm -f dwm ${OBJ} dwm-${VERSION}.tar.gz
+	@rm -f stfwm ${OBJ} stfwm-${VERSION}.tar.gz
 
 dist: clean
 	@echo creating dist tarball
-	@mkdir -p dwm-${VERSION}
+	@mkdir -p stfwm
+	@mkdir -p stfwm-${VERSION}
 	@cp -R LICENSE Makefile README config.def.h config.mk \
-		dwm.1 ${SRC} dwm-${VERSION}
-	@tar -cf dwm-${VERSION}.tar dwm-${VERSION}
-	@gzip dwm-${VERSION}.tar
-	@rm -rf dwm-${VERSION}
+		stfwm.1 ${SRC} stfwm-${VERSION}
+	@tar -cf stfwm-${VERSION}.tar stfwm-${VERSION}
+	@gzip stfwm-${VERSION}.tar
+	@rm -rf stfwm-${VERSION}
 
 install: all
 	@echo installing executable file to ${DESTDIR}${PREFIX}/bin
@@ -48,12 +49,13 @@ install: all
 	@chmod 755 ${DESTDIR}${PREFIX}/bin/dwm
 	@echo installing manual page to ${DESTDIR}${MANPREFIX}/man1
 	@mkdir -p ${DESTDIR}${MANPREFIX}/man1
-	@sed "s/VERSION/${VERSION}/g" < dwm.1 > ${DESTDIR}${MANPREFIX}/man1/dwm.1
-	@chmod 644 ${DESTDIR}${MANPREFIX}/man1/dwm.1
+	@sed "s/VERSION/${VERSION}/g" < stfwm.1 > ${DESTDIR}${MANPREFIX}/man1/stfwm.1
+	@chmod 644 ${DESTDIR}${MANPREFIX}/man1/stfwm.1
+	@mv /usr/local/bin/dwm /usr/local/bin/sfwm
 
 uninstall:
 	@echo removing executable file from ${DESTDIR}${PREFIX}/bin
-	@rm -f ${DESTDIR}${PREFIX}/bin/dwm
+	@rm -f ${DESTDIR}${PREFIX}/bin/stfwm
 	@echo removing manual page from ${DESTDIR}${MANPREFIX}/man1
 	@rm -f ${DESTDIR}${MANPREFIX}/man1/dwm.1
 
