@@ -1568,8 +1568,7 @@ textnw(const char *text, unsigned int len) {
 
 void
 tile(Monitor *m) {
-	int x, y, h, w, mw;
-	unsigned int i, n;
+	unsigned int i, n, h, r, g = 0, mw, my, ty;
 	Client *c;
 
 	for(n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++);
