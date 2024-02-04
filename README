@@ -5,7 +5,7 @@ sfwm is an extremely fast, small, and dynamic WM for X.
 
 Requirements
 ------------
-In order to build dwm you need the Xlib header files.
+In order to build sfwm you need the Xlib header files.
 
 
 Installation
@@ -22,13 +22,13 @@ If you are going to use the default bluegray color scheme it is highly
 recommended to also install the bluegray files shipped in the dextra package.
 
 
-Running dwm
+Running sfwm
 -----------
-Add the following line to your .xinitrc to start dwm using startx:
+Add the following line to your .xinitrc to start sfwm using startx:
 
     exec sfwm
 
-In order to connect dwm to a specific display, make sure that
+In order to connect sfwm to a specific display, make sure that
 the DISPLAY environment variable is set correctly, e.g.:
 
     DISPLAY=foo.bar:1 exec sfwm
@@ -48,5 +48,5 @@ like this in your .xinitrc:
 
 Configuration
 -------------
-The configuration of dwm is done by creating a custom config.h
+The configuration of sfwm is done by creating a custom config.h
 and (re)compiling the source code.
