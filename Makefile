@@ -49,7 +49,6 @@ install: all
 	@mkdir -p ${DESTDIR}${MANPREFIX}/man1
 	@sed "s/VERSION/${VERSION}/g" < stfwm.1 > ${DESTDIR}${MANPREFIX}/man1/stfwm.1
 	@chmod 644 ${DESTDIR}${MANPREFIX}/man1/stfwm.1
-	@mv /usr/local/bin/sfwm /usr/local/bin/sfwm
 
 uninstall:
 	@echo removing executable file from ${DESTDIR}${PREFIX}/bin
