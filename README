@@ -24,4 +24,4 @@ recommended to also install the bluegray files shipped in the dextra package.
 
 
 The configuration of sfwm is done by creating a custom config.h
-and (re)compiling the source code.
+and recompiling the source code.
